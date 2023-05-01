@@ -1,0 +1,243 @@
+<%- include ("../_partials/_header.ejs"); %>
+
+<!DOCTYPE html>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Proxima+Nova');
+    .divhead1{
+        text-align: left;
+        font-size: 16px;
+        padding-top: 20px;
+        padding-right: 80px;
+        padding-left: 80px;
+        font-family: 'Proxima Nova', sans-serif;
+    }
+    .divhead2{
+        text-align: left;
+        font-size: 16px;
+        padding-right: 30px;
+        padding-left: 80px;
+        font-family: 'Proxima Nova', sans-serif;
+    }
+    * {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 15px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
+blockquote{
+  font-size: 1.4em;
+  width:80%;
+  margin:20px auto;
+  font-family:open sans-serif;
+  font-style:italic;
+  color: #555555;
+  padding:1.2em 30px 1.2em 75px;
+  border-left:8px solid #89CFF0 ;
+  line-height:1.5;
+  position: relative;
+  background:#F0FFFF;
+}
+
+blockquote::before{
+  font-family:Arial;
+  content: "\201C";
+  color:#89CFF0;
+  font-size:4em;
+  position: absolute;
+  left: 10px;
+  top:-10px;
+}
+
+blockquote::after{
+  content: '';
+}
+</style>
+<body>
+    <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
+<div class="divhead1">  
+    <h3>Water Consumption and Conservation in Arizona: Understanding the Challenges and Opportunities</h3>   
+<p>Arizona is a state in the southwestern United States and water has always been a scarce resource in Arizona due to its arid climate. Arizona has one of the highest water consumption rates in the country. According to the Arizona Department of Water Resources, the average Arizonan uses approximately 120 gallons of water per day, compared to the national average of approximately 80-100 gallons per day.
+    Agriculture is Arizona's largest water user. Agriculture accounts for approximately 74% of water use in Arizona, according to the Arizona Department of Water Resources, with municipal and industrial uses accounting for the remaining 26%.
+</p>
+<blockquote>The average person in Arizona uses around 120 gallons of water per day, compared to the national average of around 80-100 gallons per day.</blockquote>
+<p>In recent years, the state has implemented a number of water conservation programs and initiatives to help reduce water consumption and ensure the long-term viability of its water resources. Programs to promote water-efficient landscaping, low-flow plumbing fixtures, and water-efficient appliances are among them. Overall, water consumption and conservation are critical issues in Arizona, with serious consequences for the state's economy, environment, and quality of life. Arizona can help ensure a sustainable water future for future generations by promoting responsible water use and implementing effective conservation strategies.
+</p>
+<h3>Tempe Water Watch: Tracking Single Vs Multi-Family Usage</h3>
+<p>The graph below shows how water consumption varies over time between single-family and multi-family properties. 
+    On average, multi-family properties consume more water, but there are some years when the trend is reversed. 
+    It will be interesting to see if this gap continues to close as more people become aware of the importance of water conservation.
+</p>
+<p>In general, multi-family properties consume more water than single-family homes. This is evident from the fact that the bars for multi-family properties are higher than those for single-family homes in most years.
+    However, there are some years where single-family homes consume more water than multi-family properties. For example, in 2011 and 2016, the bars for single-family homes are higher than those for multi-family properties.
+    The overall water consumption for both single and multi-family properties has been decreasing over time, which is a positive trend.
+    There is a noticeable dip in water consumption for both types of properties in 2015. It's unclear what caused this dip, but it could be due to a variety of factors such as changes in weather patterns, conservation efforts, or changes in the water pricing structure.
+    The difference in water consumption between single and multi-family properties seems to be shrinking over time. While multi-family properties still consume more water on average, the gap between the two is smaller in recent years than it was in the past.</p>
+    <tableau-viz id="tableauViz" src='https://public.tableau.com/views/WaterConsumption_16811957555580/SinglevsMultifamilyTotal?:language=en-US&:display_count=n&:origin=viz_share_link' height='500px' width='1000px' toolbar='bottom' hide-tabs>
+    </tableau-viz>
+<h3>Tempe Water Watch: Comparing GPCD for Single vs. Multi-Family Properties</h3>
+<p>The visualization provides useful information about how GPCD varies between single and multi-family properties 
+    in Tempe over time. It suggests that multi-family properties generally have a higher GPCD than single-family 
+    properties, but that both types of properties are becoming more water-efficient over time.GPCD (Gallons per Capita per Day) is generally higher for multi-family properties than single-family properties. This is indicated by the orange bars being consistently higher than the blue bars in most years.
+    However, there is a trend towards decreasing GPCD for both single-family and multi-family properties over time. This is a positive development and suggests that conservation efforts may be having an impact.
+    There are a few years where the GPCD for single-family properties is higher than for multi-family properties. For example, in 2012 and 2016, the blue bars are higher than the orange bars. This may be due to a variety of factors, such as changes in occupancy rates, changes in the age of the properties, or changes in water pricing.  
+    The difference in GPCD between single and multi-family properties seems to be shrinking over time. While multi-family properties still have a higher GPCD on average, the gap between the two is smaller in recent years than it was in the past.
+</p>
+<tableau-viz id="tableauViz" src='https://public.tableau.com/views/WaterConsumption_16811957555580/SinglevsmultifamilyGPCD_1?:language=en-US&:display_count=n&:origin=viz_share_link' height='500px' width='1000px' toolbar='bottom' hide-tabs>
+</tableau-viz>
+<p>There is a significant difference in GPCD between single-family and multi-family properties in some years. For example, in 2010 and 2011, the GPCD for multi-family properties was almost twice as high as for single-family properties. This suggests that there may be opportunities for targeted water conservation efforts in multi-family properties to help bring their usage closer to that of single-family properties.
+    The year with the lowest overall GPCD for both single-family and multi-family properties was 2020. This may be due in part to the effects of the COVID-19 pandemic, which caused many people to spend more time at home and may have led to changes in water usage patterns.
+    The decrease in GPCD over time is not consistent across all years. For example, while GPCD decreased steadily from 2011 to 2016, it increased slightly in 2017 before decreasing again in subsequent years. This suggests that factors other than conservation efforts, such as changes in weather patterns or demographic shifts, may be influencing water usage in some years. 
+    The difference in GPCD between single-family and multi-family properties is generally higher in years with higher overall water consumption. This suggests that reducing overall water consumption may be an effective way to narrow the gap between GPCD for different types of properties.</p>
+<h3>Water Usage vs Population</h3>
+<p> This visualization provides useful information about how total residential water usage in Tempe is related to 
+    population growth over time. It suggests that conservation efforts may be having an impact on overall water 
+    usage, but that other factors also play a role. By understanding these trends and patterns, water conservation 
+    efforts can be targeted more effectively to achieve the greatest impact.</p>
+    <tableau-viz id="tableauViz" src='https://public.tableau.com/views/WaterConsumption_16811957555580/TotalResidentialusagevspopulation?:language=en-US&:display_count=n&:origin=viz_share_link' height='500px' width='1000px' toolbar='bottom' hide-tabs>
+    </tableau-viz>
+    <p>While the population of Tempe has increased steadily over time, total residential water usage has not necessarily increased in lockstep. There are some years where water usage is relatively flat even as population continues to grow. For example, between 2014 and 2016, population increased by over 4,000 people while water usage remained relatively stable.
+        There are some years where total residential water usage decreases even as population continues to grow. For example, between 2011 and 2012, population increased by almost 2,000 people while water usage decreased by almost 300 million gallons. This suggests that conservation efforts may be having an impact on overall water usage in Tempe.
+        The year with the highest total residential water usage was 2015, when usage exceeded 15 billion gallons. This may be due in part to factors such as weather patterns or changes in population demographics.
+        There is a correlation between population and total residential water usage, but it is not a perfect correlation. This suggests that there are factors other than population growth that influence overall water usage in Tempe, such as changes in weather patterns, changes in water pricing, or changes in landscaping practices.
+    </p>
+<h3>Comparing Water Usage and Property Types in Tempe: Single-Family vs. Multi-Family</h3>
+<p>The insights from this visualization suggest that both single-family and multi-family properties contribute 
+    to the overall water usage in Tempe, but in different ways. Single-family properties use more water per person 
+    on average, but there are more multi-family properties and they are growing at a faster rate. Understanding 
+    these patterns can help city planners and water conservationists target their efforts more effectively to 
+    reduce overall water usage in Tempe.</p>
+    <tableau-viz id="tableauViz" src='https://public.tableau.com/views/WaterConsumption_16811957555580/TotalSinglevsmultifamilyvspopulation?:language=en-US&:display_count=n&:origin=viz_share_link' height='500px' width='1000px' toolbar='bottom' hide-tabs>
+    </tableau-viz>
+<p>The population growth rate for multi-family properties has been significantly higher than for single-family properties since 2011. This may help to explain why the rate of increase in water usage for multi-family properties has also been higher.
+
+    The ratio of water usage to population is higher for single-family properties than for multi-family properties. In 2019, the average gallons per capita per day (GPCD) for single-family properties was around 138, while for multi-family properties it was around 86. This suggests that on average, single-family properties use significantly more water per person than multi-family properties.
+    
+    There is a correlation between the number of single-family and multi-family properties and the population of Tempe. However, the correlation is not perfect, which suggests that other factors such as changes in property size or occupancy rates may also be affecting the overall water usage.
+    
+    The number of multi-family properties in Tempe has increased by almost 50% since 2011, while the number of single-family properties has increased by just over 10%. This suggests that multi-family properties are becoming a more important factor in overall water usage in Tempe.</p>
+<h3>Deep Dive into Water Consumption: Revealing Insights with Mesa Water Analysis</h3>
+    <p>Water Consumption Analysis notebook has been done in plotly and one of the main differences between Plotly and Tableau is that Plotly is primarily focused on creating interactive, web-based visualizations, while Tableau is more focused on creating static, printable visualizations.
+    People may prefer Plotly if they want to create interactive, web-based visualizations that allow for more user engagement and exploration of data.
+    
+    On the other hand, people may prefer Tableau if they want to create more static, printable visualizations that can be used in reports or presentations.
+</p>
+<p>In this notebook  "Residential," "Commercial," "Interdepartmental," and "Other" refer to different customer classes or categories based on their usage of water.
+
+   <br><b>Residential</b>: Refers to households or residential buildings that consume water for daily use, such as drinking, cooking, cleaning, and bathing.
+    
+    <br><b>Commercial:</b> Refers to businesses or commercial buildings that consume water for their operations, such as restaurants, hotels, hospitals, and offices.
+    
+    <br><b>Interdepartmental:</b> Refers to government or public institutions that consume water for their operations, such as schools, universities, hospitals, and government offices.
+    
+    <br><b>Other:</b> Refers to any other customer class that is not included in the above categories, such as agricultural customers or industrial customers.
+    
+    <br>By categorizing customers into different classes, it becomes easier to analyze water consumption patterns and identify areas for conservation efforts. For example, if the analysis shows that the commercial sector is consuming a disproportionately large amount of water compared to other sectors, it may suggest the need for targeted conservation measures for that sector.</p>
+<p>
+
+    <h4>Trends in Annual Water Consumption:</h4> This visualization shows the trends in annual water consumption over a period of several years. It can be used to identify long-term patterns in water usage and to predict future consumption levels.</p>
+    <img class="image" src="http://localhost:3000/images/waterconsumption.png" height="500px" width="800px">
+
+    <div class="row">
+        <div class="column">
+            <img class="image" src="http://localhost:3000/images/4classwater.png" height="300px" width="500px">
+            </div>
+        <div class="column">
+            <img class="image" src="http://localhost:3000/images/4classwater2.png" height="280px" width="500px" >
+        </div>
+    </div>
+    
+    <p><h4>Water Usage by Customer Class:</h4> This visualization breaks down water usage by different customer classes, such as residential, commercial, and interdepartmental. It can be used to identify which customer classes are using the most water and to target conservation efforts accordingly.</p>
+    <img class="image" src="http://localhost:3000/images/reswc.png" height="500px" width="800px">
+    <div class="row">
+        <div class="column">
+            <img class="image" src="http://localhost:3000/images/reswc2.png" height="300px" width="500px">
+            </div>
+        <div class="column">
+            <img class="image" src="http://localhost:3000/images/reswc3.png" height="280px" width="500px">
+        </div>
+    </div>
+    <p><h4> Monthly Water Consumption Patterns:</h4> This visualization shows how water consumption varies by month over a period of several years. It can be used to identify seasonal patterns in water usage and to predict future consumption levels.</p>        
+    <p><h4> Spatial Patterns of Water Consumption:</h4> This visualization uses a heatmap to show the spatial patterns of water consumption across different regions or areas. It can be used to identify "hot spots" where water usage is particularly high and to target conservation efforts accordingly.</p>
+    <img class="image" src="http://localhost:3000/images/wcoveryears.png" height="500px" width="800px">
+  
+    <img class="image" src="http://localhost:3000/images/wcoveryears2.png" height="500px" width="800px">
+     <div class="row">
+        <div class="column">
+            <img class="image" src="http://localhost:3000/images/commercialwc.png" height="300px" width="500px">
+            </div>
+        <div class="column">
+            <img class="image" src="http://localhost:3000/images/commercialwc2.png" height="280px" width="500px">
+        </div>
+        </div>
+        <p><h4> Predicting Future Water Usage:</h4> This visualization uses a forecasting model to predict future water usage levels based on historical data. It can be used to plan for future demand and to identify potential areas for conservation.</p>
+        <p><h4> Relationships Between Water Consumption Factors:</h4> This visualization shows the correlations between different factors that influence water consumption, such as temperature, precipitation, and population density. It can be used to identify which factors have the greatest impact on water usage and to target conservation efforts accordingly.</p>
+         <p><h4>Distribution of Water Consumption by Customer Class:</h4>This visualization shows the distribution of water consumption by different customer classes, using boxplots. It can be used to identify variations in water usage within each customer class and to target conservation efforts accordingly.
+         </p>
+         <img class="image" src="http://localhost:3000/images/interwc.png" height="500px" width="800px">
+         <div class="row">
+            <div class="column">
+                <img class="image" src="http://localhost:3000/images/otherwc1.png" height="300px" width="500px">
+                </div>
+            <div class="column">
+                <img class="image" src="http://localhost:3000/images/otherwc3.png" height="280px" width="500px">
+            </div>
+            </div>
+            <img class="image" src="http://localhost:3000/images/wc.png" height="500px" width="700px">
+    <p>In the water consumption analysis, a multiple linear regression model was built to predict water consumption based on temperature, precipitation, and population. The output of the regression analysis includes the regression equation, regression coefficients, and model performance metrics.</p>
+    <p>Based on the regression analysis output, we can make some interpretations about the relationships between the independent variables and water consumption. For example, we can conclude that an increase in temperature is associated with an increase in water consumption, while an increase in precipitation is associated with a decrease in water consumption. We can also see that population has a positive but relatively small effect on water consumption compared to temperature and precipitation.
+
+        Overall, the multiple linear regression model provides insights into how changes in temperature, precipitation, and population can affect water consumption, and can be useful for predicting and managing water usage.Prophet works by decomposing the time series data into its trend, seasonality, and holiday components, and modeling each component separately. The trend component captures the overall direction of the time series, while the seasonality component captures the repeating patterns over a fixed period (e.g., daily, weekly, monthly). The holiday component captures the impact of holidays or special events that may influence the time series.
+
+        To use Prophet, the input data must be in a specific format with two columns: a date column and a numeric column representing the time series values. In this analysis, the historical water consumption data was formatted in this way.</p>
+        In the water consumption analysis using Prophet, the forecasted data represents the predicted values of water consumption for future time periods based on the historical data and the Prophet model.
+
+        The Prophet model uses the historical data to identify patterns and trends in the water consumption time series, and generates a forecast for future time periods based on those patterns and trends. The forecasted data includes a prediction of water consumption values for each future time period, along with an uncertainty interval (represented by the "yhat_lower" and "yhat_upper" columns) that accounts for the potential variability and unpredictability in the time series.
+        
+        The forecasted data can be used for various purposes, such as resource planning, budgeting, and decision-making. For example, water management authorities can use the forecasted data to anticipate future water demand and plan for adequate supply, while businesses can use the data to plan for resource allocation and production schedules.
+        
+        It's important to note that the forecasted data is based on the assumptions and limitations of the Prophet model and the historical data. The accuracy and reliability of the forecasted data may be affected by changes in external factors such as climate, population growth, or changes in water usage patterns. Therefore, it's important to continually update and evaluate the model and the data to ensure the validity of the predictions over time.
+    
+   
+        
+        <img class="image" src="http://localhost:3000/images/pro1.png" height="500px" width="1000px">
+        <img class="image" src="http://localhost:3000/images/pro2.png" height="500px" width="1000px">
+        <img class="image" src="http://localhost:3000/images/pro3.png" height="500px" width="1000px">
+        <img class="image" src="http://localhost:3000/images/pro4.png" height="500px" width="1000px"> </p>   
+</div>
+<div class="divhead1"> 
+    <h3>Water Usage in Mesa, Arizona: Insights and Trends from Household Consumption Data</h3>
+    <p>The average monthly water usage for a single-family household in Mesa, Arizona, is around 8,000 gallons, which is higher than the national average of 7,200 gallons per month.
+
+        The highest water usage recorded for a single-family household in Mesa was over 66,000 gallons in one month, which is more than 8 times the average monthly usage.
+        
+        The data shows that water usage tends to increase during the summer months, which is likely due to higher temperatures and increased outdoor water usage for activities like watering lawns and gardens and filling swimming pools.
+        
+        The viz also highlights the impact of water conservation efforts, such as the implementation of tiered pricing and the availability of rebates for water-efficient appliances. These efforts have led to a decrease in water usage in Mesa over the past several years.</p>
+        <tableau-viz id="tableauViz" src='https://public.tableau.com/views/WaterConsumption_16811957555580/MesaWaterBill?:language=en-US&:display_count=n&:origin=viz_share_link' height='500px' width='1000px' toolbar='bottom' hide-tabs>
+        </tableau-viz>
+    <p>The data shows a significant gap between actual water consumption and billed water consumption for single-family households in Mesa, Arizona. This indicates that there may be water leaks or other issues that are causing water to be lost before it reaches the meter.
+
+        The visualization also shows that the gap between actual and billed water consumption tends to be higher in the summer months, which is likely due to increased outdoor water usage during this time.
+        
+        The data highlights the impact of water conservation efforts in Mesa, including the implementation of tiered pricing and the availability of rebates for water-efficient appliances. These efforts have led to a decrease in water usage over time, as evidenced by the declining trend in billed water consumption since 2010.
+        
+        The visualization also shows the difference in billed water consumption between single-family households and multi-family households in Mesa. Single-family households tend to use more water on average than multi-family households, which may be due to differences in household size, outdoor water usage, or other factors.
+        
+        Overall, this visualization provides valuable insights into water consumption patterns in Mesa, including the impact of conservation efforts and the need for more efficient water management practices to reduce losses from leaks and other issues.</p>
+        <tableau-viz id="tableauViz" src='https://public.tableau.com/views/WaterConsumption_16811957555580/MESAActualVsBilledwaterconsumption?:language=en-US&:display_count=n&:origin=viz_share_link' height='500px' width='1000px' toolbar='bottom' hide-tabs>
+        </tableau-viz>
+    </div>
+</body>
+</html>
+<%- include ("../_partials/_footer.ejs"); %>

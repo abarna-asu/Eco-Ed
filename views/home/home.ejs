@@ -1,0 +1,211 @@
+<%- include ("../_partials/_header.ejs"); %>
+
+<!DOCTYPE html>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Proxima+Nova');
+    .divhead1{
+        text-align: left;
+        font-size: 16px;
+        padding-top: 20px;
+        padding-right: 80px;
+        padding-left: 80px;
+        font-family: 'Proxima Nova', sans-serif;
+    }
+    .divhead2{
+        text-align: left;
+        font-size: 16px;
+        padding-right: 30px;
+        padding-left: 80px;
+        font-family: 'Proxima Nova', sans-serif;
+    }
+    * {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 15px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
+blockquote{
+  font-size: 1.4em;
+  width:80%;
+  margin:20px auto;
+  font-family:open sans-serif;
+  font-style:italic;
+  color: #555555;
+  padding:1.2em 30px 1.2em 75px;
+  border-left:8px solid #78C0A8 ;
+  line-height:1.5;
+  position: relative;
+  background:#EDEDED;
+}
+
+blockquote::before{
+  font-family:Arial;
+  content: "\201C";
+  color:#78C0A8;
+  font-size:4em;
+  position: absolute;
+  left: 10px;
+  top:-10px;
+}
+
+blockquote::after{
+  content: '';
+}
+.button1 {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button1 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+  float:right;
+}
+
+.button1:hover span {
+  padding-right: 25px;
+}
+
+.button1:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+<body>
+<div class="divhead1">     
+<p>The purpose of Eco-Ed is to improve awareness among students on the local community's solid waste management, energy consumption, water consumption and management by creating an interactive UI with visualization on three main topics of sustainability - landfills, waste water, energy consumption.</p>
+    <h2> RECYCLING DATA ANALYSIS </h2>
+    <p>While the United States has a recycling rate of <b>32%</b>, other developed nations such as Germany and Austria have rates above 50%. 
+    It means that only 94.2 million tons of the 292.4 million tons of solid waste produced in the were recycled or composted in that year in U.S.This might be a result of imbalances in government policies supporting sustainability and waste management practices.</p>
+    <p> We could see in below visualization that the states in the Northeast and West Coast regions of the US typically have the highest rates of recycling, while South and Midwest tend to have the lowest rates of recycling. This might be the result of things like increased population density, increased knowledge of sustainable practices, and more effective government policies and programs that encourage recycling and waste reduction.
+    
+    <p>The states with the highest recycling rates tend to have strong policies and programs promoting sustainability, such as statewide recycling mandates, bottle deposit laws, and waste bans on specific types of waste. For example, Vermont has a universal recycling law that requires all residents and businesses to recycle, compost, or divert all waste from landfills.
+        Additionally, the visualization demonstrates how recycling rates can differ greatly even within a single state. California, for example, has a recycling rate of 40%, but some counties within the state have much lower rates. This suggests that focused outreach and education campaigns may be successful in raising recycling rates in particular communities.
+        </p>
+    <p>However, it is worth noting that the United States has made progress in improving its recycling rate in recent years. 
+        The United States had a recycling rate of about 25% in 2015, but by 2018, it had risen to 32%. This rise could be attributed to increased public recycling awareness and education, as well as the adoption of fresh policies and initiatives promoting sustainability.</p>
+      </div>
+    <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
+    <div class="divhead2">
+        <tableau-viz id="tableauViz" src='https://public.tableau.com/shared/MWJ4NZC26?:display_count=n&:origin=viz_share_link' height='600px' width='1400px' toolbar='bottom' hide-tabs></tableau-viz>
+        
+        <div class="divhead1">
+          <h3>ARIZONA RECYCLING MEASURES</h3>
+          <P>Recycling is crucial to environmental sustainability and waste reduction. Many municipalities in Arizona have implemented recycling programs to promote resource conservation and landfill waste reduction. 
+          The visualization below gives a thorough overview of Arizona's county-level recycling initiatives from 2013 to 2021.
+          The visualization shows the overall recycling rates for each Arizona county. The counties are color-coded based on the overall recycling measures, with darker shades indicating higher measures. To view the precise measure for a given county, the user can hover over that county.
+        </p><blockquote>Arizona's recycling rate of 19% is lower than the national average of 25%.The most commonly recycled materials in Arizona include cardboard, paper, plastic, and aluminum.
+        </blockquote>
+          <p>The highest recycling measures are concentrated in the more densely populated counties in Arizona, such as Maricopa, Pima, and Coconino counties. Maricopa houses most of ASU students since major cities including Phoenix, Tempe, Mesa, Chandler, Glendale, Scottsdale, and Peoria
+            From 2013 to 2021, the total recycling measures in most counties in Arizona increased steadily, with a few exceptions where the measures fluctuated or slightly decreased.
+          A few counties, like Santa Cruz and Graham counties, have made significant improvements over time, despite the fact that the majority of counties in Arizona have relatively low total recycling measures when compared to the top performing counties. 
+          The visualization emphasizes the possibility of targeted interventions to boost recycling efforts in specific counties or regions, such as rural counties or counties with lower population densities.
+          </p>
+         
+        </div>       
+        <tableau-viz id="tableauViz" src='https://public.tableau.com/views/MunicipalRecyclingData2013-21/TotalRecycleMeasuresAZCounties2?:language=en-US&:display_count=n&:origin=viz_share_link' height='600px' width='1400px' toolbar='bottom' hide-tabs>
+    </tableau-viz>
+    
+      <div class="divhead1">
+      <h3>Plastic Usage in the U.S</h3>
+      <p>Plastic waste is a major global environmental issue, with plastic entering oceans and other waterways and harming marine life and ecosystems. With an estimated 8 million tons of plastic waste entering the oceans annually, the United States is one of the biggest contributors to this issue. Over the past 60 years, the amount of plastic used in the United States has significantly increased, rising from less than 10 million tons in 1960 to over 35 million tons in 2018. Plastic is primarily used for packaging, but it is also widely used in other industries such as building and construction, transportation, and consumer and institutional goods. From 1960 to the mid-1990s, plastic use increased steadily, but from the late 1990s to 2018, it increased more quickly.
+      </p>
+      <blockquote>The use of plastic packaging in the U.S. has increased by over 12,000% since 1960!</blockquote>
+      <p>Plastic consumption per capita in the United States is among the highest in the world, averaging around 110 kg per person per year.
+        While the use of plastic in the United States has increased significantly, the recycling rate for plastic has remained relatively low, with only about 9% of plastic waste being recycled in 2018.
+        The United States is one of the largest contributors to this problem, with an estimated 8 million tons of plastic waste entering the oceans each year.
+        </p>
+              <tableau-viz id="tableauViz" src='https://public.tableau.com/views/CUSTOMER_COMBINE/Sheet17?:language=en-US&:display_count=n&:origin=viz_share_link' height='500px' width='1000px' toolbar='bottom' hide-tabs>
+              </tableau-viz>
+        <h3>Plastic Recycling in Arizona: Understanding the State's Efforts to Reduce Waste</h3>
+      <p>Plastic is one of the most widely used materials in the world, but sadly, a lot of it ends up in landfills or the environment, where it can take hundreds of years to decompose. However, there are numerous initiatives being made in Arizona to boost recycling of plastic and lower waste.
+        Plastic is one of the most commonly recycled materials in Arizona. Many cities and municipalities have implemented single-stream recycling programs, which allow residents to mix all recyclable materials together in one bin, making it easier to recycle plastic and other materials.</p>
+        <blockquote>Maricopa County's recycling rate was around 15% in 2013, but by 2019 it had risen to almost 20%. </blockquote>
+        <p>You can see that the recycling rate in Maricopa County, Arizona has steadily increased over the last few years from the visualization present right. 
+          This shows that Maricopa County's efforts to increase recycling, such as expanding recycling programs and enhancing public education about recycling, have been successful. Although there is still room for improvement, Arizona's sustainability efforts and the environment are benefiting from this upward trend in recycling rates.
+        </p>
+        <p>In Arizona, recycling is frequently accepted for plastic bottles and containers in particular. The Arizona Department of Environmental Quality reports that yogurt cups, milk jugs, soda bottles, and detergent bottles are among the plastic containers that are typically recycled.
+
+          Arizona's plastic recycling rates vary by region, but the state as a whole is making progress in lowering plastic waste. Cities and municipalities can improve their recycling programs and raise the percentage of plastic waste recycled with the help of the Arizona Department of Environmental Quality's resources and assistance.
+          
+          We can contribute to a more sustainable future for Arizona and beyond by recycling plastic and other materials to lessen the amount of waste that ends up in landfills.
+          </p>
+      </div>
+      <div class="row">
+        <div class="column">
+            <tableau-viz id="tableauViz" src='https://public.tableau.com/views/MunicipalRecyclingData2013-21/RecyclingdataAZAreaMap?:language=en-US&:display_count=n&:origin=viz_share_link' height='600px' width='800px' toolbar='bottom' hide-tabs>
+            </tableau-viz>
+        </div>
+        <div class="column">
+            <tableau-viz id="tableauViz" src='https://public.tableau.com/views/MunicipalRecyclingData2013-21/MaricopaRecyclingRateAZ?:language=en-US&:display_count=n&:origin=viz_share_link' height='600px' width='800px' toolbar='bottom' hide-tabs>
+            </tableau-viz>    
+            </body>
+        </div>
+      </div>
+      <div class="divhead1">
+        <div class="row">
+        <h3>Arizona County Recycling Measures Map</h3>
+        <p>
+          The Arizona map helps us visualizing the geographic distribution of data, whereas the line chart is useful for spotting patterns and trends in data. Since 2013, the state of Arizona's overall recycling rate has been rising, with a small decline in 2017. Recycling rates were around 20% in 2013, but by 2021 they were up to about 24%.Sedona had one of the highest rates of recycling in Arizona, whereas Maricopa had one of the lowest rates. Glass is followed by plastic and paper about 18% and 12% recycling rates, respectively.
+        </p>
+          <blockquote>Glass is the most recycled material and Sedona had one of the highest recycling rate.  </blockquote>
+        <p>The Arizona map visualization on the right demonstrates how widely recycling rates for plastic vary by county. For instance, while Maricopa County recycles about 25% of its plastic waste, Coconino and Yuma counties recycle less than 5% of their plastic waste. This implies that there might be significant inequalities in the state's infrastructure for plastic recycling and in its educational system.
+          Maricopa County has the highest plastic recycling rate in Arizona, followed by Pima County. This implies that these counties have a more developed infrastructure for recycling plastic than other counties.It also demonstrates how widely recycling rates for plastic vary by county. For instance, while Maricopa County recycles about 25% of its plastic waste, Coconino and Yuma counties recycle less than 5% of their plastic waste. It also means that there might be substantial disparities in the state's infrastructure for plastic recycling and in its educational system.
+         </p>
+      </div>
+      
+        <div class="column">
+            <tableau-viz id="tableauViz1" src='https://public.tableau.com/views/MunicipalRecyclingData2013-21/TotalRecycleMeasuresAZCounties?:language=en-US&:display_count=n&:origin=viz_share_link' height='500px' width='800px' toolbar='bottom' hide-tabs>
+            </tableau-viz>
+        </div>
+        <div class="column">
+            <tableau-viz id="tableauViz1" src='https://public.tableau.com/views/MunicipalRecyclingData2013-21/RecyclingdataAZ?:language=en-US&:display_count=n&:origin=viz_share_link' height='500px' width='800px' toolbar='bottom' hide-tabs>
+            </tableau-viz>
+        </div>
+    </div>
+    
+</div>
+
+</script>
+</body>
+<button id="myButton" class="button1" >Solid</button>
+
+<script type="text/javascript">
+    document.getElementById("myButton").onclick = function () {
+        location.href = "/solid";
+    };
+</script>
+</html>
+<%- include ("../_partials/_footer.ejs"); %>
